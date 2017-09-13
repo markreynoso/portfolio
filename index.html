@@ -6,16 +6,19 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/aboutme.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,600" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="main-nav">
-      <a class="btn btn-primary" href="#nav-burger" aria-label="Skip to main navigation"><i class="fa fa-bars" aria-hidden="true"></i></a>
-      <nav>
+      <a class="btn btn-primary" href="#" aria-label="Skip to main navigation"><i class="fa fa-bars fa-4x" aria-hidden="true"></i></a>
+      <nav id="nav" class="toggle">
         <ul id="nav-list">
-          <li class="list" >About</li>
-          <li class="list" >Portfolio</li>
-          <li class="list" >Experience</li>
+          <a href="index.html"><li class="list" >About</li></a>
+          <a href="#"><li class="list" >Portfolio</li></a>
+          <a href="#"><li class="list" >Experience</li></a>
         </ul>
       </nav>
     </div>
@@ -25,6 +28,19 @@
         <p class="titles">Developer | Designer | Speaker</p>
       </div>
     </div>
+    <div class="about">
+      <img id="mark" src="images/mark.jpg" alt="picture of Mark">
+      <p>Schlitz +1 dreamcatcher before they sold out offal cronut swag food truck chillwave raclette meditation migas. Pinterest truffaut green juice shabby chic, gluten-free woke tattooed tacos swag affogato small batch occupy. Jean shorts bushwick lyft marfa vegan put a bird on it, humblebrag direct trade kombucha locavore photo booth crucifix semiotics helvetica tbh. Woke tacos lomo cliche craft beer shoreditch knausgaard taxidermy pok pok fam XOXO YOLO. Bicycle rights farm-to-table tote bag, craft beer hell of fam literally VHS meh mustache selfies cardigan celiac roof party. Air plant shabby chic ramps sustainable. Taxidermy actually microdosing, YOLO chia kitsch wayfarers small batch franzen migas pop-up coloring book. Gluten-free mumblecore poke pitchfork semiotics distillery actually next level cloud bread. Taxidermy mixtape salvia hell of, crucifix banjo typewriter disrupt put a bird on it chambray.</p>
+    </div>
+    <footer>
+      <div class="links">
+        <a href="http://github.com/markreynoso"><img src="images/gh.svg" alt="github link"></a>
+        <a href="https://www.linkedin.com/in/mark-reynoso-426686b0/"><img src="images/linkedin.png" alt="linkedin link"></a>
+      </div>
+      <div class="copyright">
+        &copy; 2017 Mark Reynoso
+      </div>
+    </footer>
   </body>
   <script type="text/javascript" src="app.js"></script>
 </html>

@@ -27,3 +27,8 @@ function Edu (school, degree, year) {
   this.degree = degree;
   this.year = year;
 }
+// $(function(){
+$('.btn').click(function(){
+  $('#nav').toggleClass('toggle');
+});
+// });
