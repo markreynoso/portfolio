@@ -1,3 +1,5 @@
+'use strict';
+
 function Project (url, img, year, hrs, client, type, title) {
   this.url = url;
   this.img = img;
