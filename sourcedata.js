@@ -31,4 +31,6 @@ function Edu (school, degree, year) {
   this.year = year;
 }
 
-new Project ('https://willjreid.github.io/procrastinate/quiz.html', 'images/procrastinate.png', '2017', 'code fellows', 'website', 'Procrasinator Generator');
+new Project ('Procrasinator Generator', 'https://willjreid.github.io/procrastinate/quiz.html', 'images/procrastinate.png', '2017', 'Code Fellows', 'website');
+new Project ('Bus Mall', 'https://markreynoso.github.io/bus-mall/', 'images/busmall.png', '2017', 'Code Fellows', 'website');
+new Project ('Salmon Cookies', 'https://markreynoso.github.io/cookie-stand/', 'images/salmoncookies.png', '2017', 'Code Fellows', 'website');
