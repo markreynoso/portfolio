@@ -1,13 +1,14 @@
 'use strict';
+var projects = [];
 
-function Project (url, img, year, hrs, client, type, title) {
-  this.url = url;
+function Project (title, link, img, year, client, type) {
+  this.title = title;
+  this.link = link;
   this.img = img;
   this.year = year;
-  this.hrs = hrs;
   this.client = client;
   this.type = type;
-  this.title = title;
+  projects.push(this);
 }
 
 function Job (title, start, end, sum, company, used) {
@@ -29,11 +30,5 @@ function Edu (school, degree, year) {
   this.degree = degree;
   this.year = year;
 }
-// $(function(){
-$('.btn').click(function(){
-  $('#nav').toggleClass('toggle');
-});
-// });
-$('.list').click(function(){
-  $('#nav').togggleClass('toggle');
-});
+
+new Project ('https://willjreid.github.io/procrastinate/quiz.html', 'images/procrastinate.png', '2017', 'code fellows', 'website', 'Procrasinator Generator');
