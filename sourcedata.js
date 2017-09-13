@@ -9,7 +9,7 @@ function Project (title, link, img, year, client, type, description) {
   this.client = client;
   this.type = type;
   this.description = description;
-  this.content = function () {
+  this.toHtml = function () {
     var $newProject = $('#template').clone();
     $newProject.attr('id', '')
       .addClass('project');
@@ -23,7 +23,9 @@ function Project (title, link, img, year, client, type, description) {
       .attr('src', this.img);
     $newProject.find('p')
       .addClass('description')
-      .text(this.description);
+      .text(this.description)
+      .after('<hr>');
+    return $newProject;
   }
   projects.push(this);
 }
