@@ -32,6 +32,9 @@ h3 {
 .btn {
   background-color: rgba(0, 0, 0, 0.4);
 }
+[data-type="portfolio"] {
+  display: none;
+}
 @media (min-width: 655px) {
   .project h4 {
     font-size: 2em;

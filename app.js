@@ -1,10 +1,22 @@
 
-$('.btn').click(function(){
+// nav button
+$('.btn').on('click', function(){
   $('#nav').toggleClass('toggle');
 });
-$('.list').click(function(){
-  $('#nav').togggleClass('toggle');
+$('.list').on('click', function(){
+  $('#nav').toggleClass('toggle');
 });
+
+// nav links
+$('.list').eq(0).on('click', function(){
+  $('[data-type="about"]').css({display: 'block'});
+  $('[data-type="portfolio"]').css({display: 'none'});
+});
+$('.list').eq(1).on('click', function(){
+  $('[data-type="about"]').css({display: 'none'});
+  $('[data-type="portfolio"]').css({display: 'block'});
+});
+
 
 function Project (title, link, img, year, client, type, description) {
   this.title = title;
