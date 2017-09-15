@@ -1,31 +1,15 @@
+'use strict';
 
-// nav button
-$('.btn').on('click', function(){
-  $('#nav').toggleClass('toggle');
-});
-$('.list').on('click', function(){
-  $('#nav').toggleClass('toggle');
-});
+var projects = [];
 
-// nav links
-$('.list').eq(0).on('click', function(){
-  $('[data-type="about"]').css({display: 'block'});
-  $('[data-type="portfolio"]').css({display: 'none'});
-});
-$('.list').eq(1).on('click', function(){
-  $('[data-type="about"]').css({display: 'none'});
-  $('[data-type="portfolio"]').css({display: 'block'});
-});
-
-
-function Project (title, link, img, year, client, type, description) {
-  this.title = title;
-  this.link = link;
-  this.img = img;
-  this.year = year;
-  this.client = client;
-  this.type = type;
-  this.description = description;
+function Project (details) {
+  this.title = details.title;
+  this.link = details.link;
+  this.img = details.img;
+  this.year = details.year;
+  this.client = details.client;
+  this.type = details.type;
+  this.description = details.description;
   projects.push(this);
 }
 
@@ -57,9 +41,9 @@ function Edu (school, degree, year) {
   this.year = year;
 }
 
-new Project ('Procrasinator Generator', 'https://willjreid.github.io/procrastinate/quiz.html', 'images/procrastinate.png', '2017', 'Code Fellows', 'website', 'For those times when you need a break from your busy schedule you can use the Procrasinator Generator. Don\'t waste more time than you have. This was a team project at Code Fellows at the completion of a 201 level course.');
-new Project ('Bus Mall', 'https://markreynoso.github.io/bus-mall/', 'images/busmall.png', '2017', 'Code Fellows', 'website', 'Bus Mall takes a look at a mythical magazine that is looking for customer feedback regarding which products readers may have an interest in purchasing. This was a solo project during week 3 at Code Fellows 201 level course.');
-new Project ('Salmon Cookies', 'https://markreynoso.github.io/cookie-stand/', 'images/salmoncookies.png', '2017', 'Code Fellows', 'website', 'Salmon Cookies produces reports for the imaginary cookie store selling cookies made of Salmon. This was a second week project in a 201 level course at Code Fellows.');
+devData.forEach(function(projectList) {
+  projects.push(new Project(projectList));
+});
 
 projects.forEach(function(projects) {
   $('#projects').append(projects.toHtml());
