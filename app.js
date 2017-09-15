@@ -2,33 +2,14 @@
 
 var projects = [];
 
-// nav button
-$('.btn').on('click', function(){
-  $('#nav').toggleClass('toggle');
-});
-$('.list').on('click', function(){
-  $('#nav').toggleClass('toggle');
-});
-
-// nav links
-$('.list').eq(0).on('click', function(){
-  $('[data-type="about"]').css({display: 'block'});
-  $('[data-type="portfolio"]').css({display: 'none'});
-});
-$('.list').eq(1).on('click', function(){
-  $('[data-type="about"]').css({display: 'none'});
-  $('[data-type="portfolio"]').css({display: 'block'});
-});
-
-
-function Project (title, link, img, year, client, type, description) {
-  this.title = title;
-  this.link = link;
-  this.img = img;
-  this.year = year;
-  this.client = client;
-  this.type = type;
-  this.description = description;
+function Project (details) {
+  this.title = details.title;
+  this.link = details.link;
+  this.img = details.img;
+  this.year = details.year;
+  this.client = details.client;
+  this.type = details.type;
+  this.description = details.description;
   projects.push(this);
 }
 
@@ -60,7 +41,7 @@ function Edu (school, degree, year) {
   this.year = year;
 }
 
-projectData.forEach(function(projectList) {
+devData.forEach(function(projectList) {
   projects.push(new Project(projectList));
 });
 
