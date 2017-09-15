@@ -30,24 +30,12 @@ function Project (title, link, img, year, client, type, description) {
 }
 
 Project.prototype.toHtml = function () {
-  var $newProject = $('#template').clone();
-  $newProject.attr('id', '')
-    .addClass('project');
-  $newProject.find('h4')
-    .addClass('title')
-    .text(this.title);
-  $newProject.find('a')
-    .attr('href', this.link);
-  $newProject.find('img')
-    .addClass('preview')
-    .attr('src', this.img);
-  $newProject.find('p')
-    .addClass('description')
-    .text(this.description)
-    .after('<hr>');
-  return $newProject;
+  var theHtml = $('#post-template').html();
+  var createTemplate = Handlebars.compile(theHtml);
+  $('#template').find('p').after('<hr>');
+  $('#template').attr('id', '');
+  return createTemplate(this);
 };
-
 
 function Job (title, start, end, sum, company, used) {
   this.title = title;
