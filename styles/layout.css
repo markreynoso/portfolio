@@ -84,14 +84,21 @@ a {
     left: 0;
     top: 0;
   }
+  #hav-list {
+    height: 100%;
+  }
+  .list:hover {
+    background-color: rgba(147, 147, 147, .5);
+  }
   .toggle {
     display: block;
   }
   .list {
+    border-radius: 10px;
     display: inline-block;
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
-    padding: .25em 3%;
+    padding: .3em 3%;
   }
   .mark-cont {
     top: 11em;
