@@ -11,7 +11,15 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,600" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script id="post-template" type="text/x-handlebars-template">
+      <div id="template" class="project">
+        <h4 class="title">{{ title }}</h4>
+        <a href="{{ link }}"><img src="{{ img }}" alt="image"></a>
+        <p class="description">{{ description }}</p>
+      </div>
+    </script>
   </head>
   <body>
     <div class="main-nav">
@@ -43,11 +51,7 @@
     <div data-type="portfolio">
       <h3>My Portfolio</h3>
       <section id="projects">
-        <div id="template">
-          <h4 class=""></h4>
-          <a href="#"><img src="" alt="image"></a>
-          <p class=""></p>
-        </div>
+        <!-- placeholder for template -->
       </section>
     </div>
     <hr>
