@@ -1,3 +1,6 @@
+'use strict';
+
+var projects = [];
 
 // nav button
 $('.btn').on('click', function(){
@@ -56,6 +59,10 @@ function Edu (school, degree, year) {
   this.degree = degree;
   this.year = year;
 }
+
+projectData.forEach(function(projectList) {
+  projects.push(new Project(projectList));
+});
 
 projects.forEach(function(projects) {
   $('#projects').append(projects.toHtml());
