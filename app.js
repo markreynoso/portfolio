@@ -1,6 +1,6 @@
 'use strict';
 
-var projects = [];
+var projects = [], work = [];
 
 function Project (details) {
   this.title = details.title;
@@ -10,7 +10,6 @@ function Project (details) {
   this.client = details.client;
   this.type = details.type;
   this.description = details.description;
-  projects.push(this);
 }
 
 Project.prototype.toHtml = function () {
@@ -21,13 +20,18 @@ Project.prototype.toHtml = function () {
   return createTemplate(this);
 };
 
-function Job (title, start, end, sum, company, used) {
-  this.title = title;
-  this.start = start;
-  this.end = end;
-  this.sum = sum;
-  this.company = company;
-  this.used = used;
+function Job (info) {
+  this.title = info.title;
+  this.start = info.start;
+  this.end = info.end;
+  this.summary = info.summary;
+  this.company = info.company;
+  this.used = info.used;
+}
+Job.prototype.toHtml = function () {
+  var theHtml = $('#job-template').html();
+  var createTemplate = Handlebars.compile(theHtml);
+  return createTemplate(this);
 }
 
 function Skills (skill, comp) {
@@ -47,4 +51,12 @@ devData.forEach(function(projectList) {
 
 projects.forEach(function(projects) {
   $('#projects').append(projects.toHtml());
+});
+
+jobData.forEach(function(jobList) {
+  work.push(new Job(jobList));
+});
+
+work.forEach(function(job) {
+  $('#experience').append(job.toHtml());
 });
