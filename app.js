@@ -11,12 +11,10 @@ function Project (details) {
   this.type = details.type;
   this.description = details.description;
 }
-
-Project.prototype.toHtml = function () {
+Project.prototype.toHtml = function() {
   var theHtml = $('#post-template').html();
   var createTemplate = Handlebars.compile(theHtml);
   $('#template').find('p').after('<hr>');
-  $('#template').attr('id', '');
   return createTemplate(this);
 };
 
@@ -28,7 +26,7 @@ function Job (info) {
   this.company = info.company;
   this.used = info.used;
 }
-Job.prototype.toHtml = function () {
+Job.prototype.toHtml = function() {
   var theHtml = $('#job-template').html();
   var createTemplate = Handlebars.compile(theHtml);
   return createTemplate(this);
@@ -45,18 +43,18 @@ function Edu (school, degree, year) {
   this.year = year;
 }
 
+// development projects
 devData.forEach(function(projectList) {
   projects.push(new Project(projectList));
 });
-
 projects.forEach(function(projects) {
   $('#projects').append(projects.toHtml());
 });
 
+// jobs
 jobData.forEach(function(jobList) {
   work.push(new Job(jobList));
 });
-
 work.forEach(function(job) {
   $('#experience').append(job.toHtml());
 });
