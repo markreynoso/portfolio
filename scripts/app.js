@@ -44,12 +44,32 @@ function Edu (school, degree, year) {
 }
 
 // development projects
-devData.forEach(function(projectList) {
-  projects.push(new Project(projectList));
-});
-projects.forEach(function(projects) {
-  $('#projects').append(projects.toHtml());
-});
+function onLoadPage(){
+  if (localStorage.devData){
+    let arr = JSON.parse(localStorage.devData);
+    arr.forEach(function(load){
+      projects.push(new Project (load));
+    })
+    renderToPage();
+  }
+  else {
+    $.get('/data/thedata.json', fillTheStuff);
+  }
+}
+
+ function fillTheStuff(response){
+   localStorage.setItem('devData', JSON.stringify(response));
+   response.forEach(function(fill){
+     projects.push(new Project(fill));
+   });
+   renderToPage();
+ }
+
+function renderToPage(){
+  projects.forEach(function(projectList){
+    $('#projects').append(projectList.toHtml());
+  });
+}
 
 // jobs
 jobData.forEach(function(jobList) {
