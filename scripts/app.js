@@ -11,12 +11,10 @@ function Project (details) {
   this.type = details.type;
   this.description = details.description;
 }
-
-Project.prototype.toHtml = function () {
+Project.prototype.toHtml = function() {
   var theHtml = $('#post-template').html();
   var createTemplate = Handlebars.compile(theHtml);
   $('#template').find('p').after('<hr>');
-  $('#template').attr('id', '');
   return createTemplate(this);
 };
 
@@ -28,7 +26,7 @@ function Job (info) {
   this.company = info.company;
   this.used = info.used;
 }
-Job.prototype.toHtml = function () {
+Job.prototype.toHtml = function() {
   var theHtml = $('#job-template').html();
   var createTemplate = Handlebars.compile(theHtml);
   return createTemplate(this);
@@ -45,18 +43,38 @@ function Edu (school, degree, year) {
   this.year = year;
 }
 
-devData.forEach(function(projectList) {
-  projects.push(new Project(projectList));
-});
+// development projects
+function onLoadPage(){
+  if (localStorage.devData){
+    let arr = JSON.parse(localStorage.devData);
+    arr.forEach(function(load){
+      projects.push(new Project (load));
+    })
+    renderToPage();
+  }
+  else {
+    $.get('/data/thedata.json', fillTheStuff);
+  }
+}
 
-projects.forEach(function(projects) {
-  $('#projects').append(projects.toHtml());
-});
+ function fillTheStuff(response){
+   localStorage.setItem('devData', JSON.stringify(response));
+   response.forEach(function(fill){
+     projects.push(new Project(fill));
+   });
+   renderToPage();
+ }
 
+function renderToPage(){
+  projects.forEach(function(projectList){
+    $('#projects').append(projectList.toHtml());
+  });
+}
+
+// jobs
 jobData.forEach(function(jobList) {
   work.push(new Job(jobList));
 });
-
 work.forEach(function(job) {
   $('#experience').append(job.toHtml());
 });
