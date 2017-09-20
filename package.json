@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/markreynoso/portfolio#readme",
   "dependencies": {
-    "body-parser": "^1.18.1",
     "express": "^4.15.4"
   }
 }

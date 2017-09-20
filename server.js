@@ -1,7 +1,6 @@
 'use strict';
 
 const EXPRESS = require('EXPRESS');
-const PARSER = require('body-parser').urlencoded({extended: true});
 const APP = EXPRESS();
 const PORT = process.env.PORT || 3000;
 
