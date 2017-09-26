@@ -6,20 +6,21 @@ page('/experience', experiencePage);
 page();
 
 function homePage(){
-  $('[data-type="about"]').css({display: 'block'});
-  $('[data-type="portfolio"]').css({display: 'none'});
-  $('[data-type="experience"]').css({display: 'none'});
+  $('[data-type="about"]').show();
+  $('[data-type="portfolio"]').hide();
+  $('[data-type="experience"]').hide();
 }
 
 function portfolioPage(){
-  sneakyPete.onLoadPage();
-  $('[data-type="about"]').css({display: 'block'});
-  $('[data-type="portfolio"]').css({display: 'none'});
-  $('[data-type="experience"]').css({display: 'none'});
+  app.Project.onLoadPage();
+  $('[data-type="about"]').hide();
+  $('[data-type="portfolio"]').show();
+  $('[data-type="experience"]').hide();
 }
 
 function experiencePage(){
-  $('[data-type="about"]').css({display: 'block'});
-  $('[data-type="portfolio"]').css({display: 'none'});
-  $('[data-type="experience"]').css({display: 'none'});
+
+  $('[data-type="about"]').hide();
+  $('[data-type="portfolio"]').hide();
+  $('[data-type="experience"]').show();
 }
