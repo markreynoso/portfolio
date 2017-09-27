@@ -37,9 +37,9 @@ work.forEach(function(job) {
 let newData = jobData.map(thing => thing.used).reduce(function(a, b){
   return a + b;
 });
-$('#experience').append(newData);
+$('#experience').append(`<h4>Skills</h4><p>${newData}</p>`);
 
 //github repos
 function getsMyGit(){
-  $.get('/github/users/markreynoso/repos').then(response => response.forEach(git => $('.github').append(`<p>${git.name}</p><p>${git.created_at}</p><p>${git.url}</p></br>`)))
+  $.get('/github/users/markreynoso/repos').then(response => response.forEach(git => $('.github').append(`<h4>${git.name}</h4><p>${git.created_at}</p><p>${git.url}</p></br>`)))
 }
