@@ -38,3 +38,8 @@ let newData = jobData.map(thing => thing.used).reduce(function(a, b){
   return a + b;
 });
 $('#experience').append(newData);
+
+//github repos
+function getsMyGit(){
+  $.get('/github/users/markreynoso/repos').then(response => response.forEach(git => $('.github').append(`<p>${git.name}</p><p>${git.created_at}</p><p>${git.url}</p></br>`)))
+}

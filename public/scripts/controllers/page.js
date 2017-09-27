@@ -19,7 +19,6 @@ function portfolioPage(){
 }
 
 function experiencePage(){
-
   $('[data-type="about"]').hide();
   $('[data-type="portfolio"]').hide();
   $('[data-type="experience"]').show();
