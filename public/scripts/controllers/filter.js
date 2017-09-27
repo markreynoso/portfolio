@@ -14,3 +14,8 @@ $('.list').hover(function(){
 }, function(){
   $(this).css('background-color', 'transparent');
 });
+
+//git stuff
+$('button').on('click', function(){
+  getsMyGit();
+});
