@@ -10,7 +10,12 @@ APP.use(EXPRESS.static('public'));
 APP.get('/', function(request, response){
   response.sendFile('index.html', {root: './public'});
 })
-
+APP.get('/portfolio', function(request, response){
+  response.sendFile('index.html', {root: './public'});
+})
+APP.get('/experience', function(request, response){
+  response.sendFile('index.html', {root: './public'});
+})
 APP.get('/github/*', sendTheGit);
 
 APP.get('*', function(request, response){
