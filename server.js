@@ -1,6 +1,6 @@
 'use strict';
 
-const EXPRESS = require('EXPRESS');
+const EXPRESS = require('express');
 const APP = EXPRESS();
 const PORT = process.env.PORT || 3000;
 const requestProxy = require('express-request-proxy');
@@ -30,7 +30,7 @@ function sendTheGit(request, response) {
   (requestProxy({
     url: `https://api.github.com/${request.params[0]}`,
     headers: {
-      Authorization: `token ${process.env.github_token}`
+      Authorization: `token ${process.env.GITHUB_TOKEN}`
     }
   }))(request, response);
 }
