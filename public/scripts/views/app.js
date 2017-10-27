@@ -24,14 +24,19 @@ var app = app || {};
   // development projects
   Project.onLoadPage = function(){
     if (localStorage.devData){
-      let arr = JSON.parse(localStorage.devData);
-      arr.forEach(function(load){
-        projects.push(new Project (load));
-      })
-      Project.renderToPage();
+      if (projects.length() === 0) {
+        let arr = JSON.parse(localStorage.devData);
+        arr.forEach(function(load){
+          projects.push(new Project (load));
+        })
+        Project.renderToPage();
+      }
+      else {
+        Project.renderToPage();
+      }
     }
     else {
-      $.get('/data/thedata.json', Project.fillTheStuff);
+      $.get('/data/thedata.json', Project.fillTheStuff(arr));
     }
   }
 
@@ -43,7 +48,7 @@ var app = app || {};
     Project.renderToPage();
   }
 
-  Project.renderToPage = function(){
+  Project.renderToPage = function(arr){
     $('#projects').empty();
     projects.forEach(function(projectList){
       $('#projects').append(projectList.toHtml());
