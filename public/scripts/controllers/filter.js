@@ -17,6 +17,6 @@ $('.list').hover(function(){
 
 //git stuff
 $('button').on('click', function(){
-  getsMyGit();
   $('.git').empty()
+  getsMyGit();
 });
