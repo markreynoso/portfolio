@@ -44,7 +44,7 @@ var app = app || {};
   }
 
   Project.renderToPage = function(){
-    $('#projects').empty()
+    $('#projects').empty();
     projects.forEach(function(projectList){
       $('#projects').append(projectList.toHtml());
     });
