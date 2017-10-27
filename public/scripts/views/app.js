@@ -24,7 +24,7 @@ var app = app || {};
   // development projects
   Project.onLoadPage = function(){
     if (localStorage.devData){
-      if (projects.length() === 0) {
+      if (projects.length === 0) {
         let arr = JSON.parse(localStorage.devData);
         arr.forEach(function(load){
           projects.push(new Project (load));
