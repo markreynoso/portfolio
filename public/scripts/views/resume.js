@@ -41,5 +41,5 @@ $('#experience').append(`<h4>Skills</h4><p>${newData}</p>`);
 
 //github repos
 function getsMyGit(){
-  $.get('/github/users/markreynoso/repos').then(response => response.forEach(git => $('.git').append(`<h4>${git.name}</h4><p>${git.created_at}</p><p>${git.url}</p></br>`)))
+  $.get('/github/users/markreynoso/repos').then(response => response.forEach(git => $('.git').append(`<h4>${git.name}</h4><p>${git.created_at}</p><p><a href="${git.url}">see repo</a></p></br>`)))
 }
