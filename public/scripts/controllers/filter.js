@@ -16,7 +16,7 @@ $('.list').hover(function(){
 });
 
 //git stuff
-$('button').on('click', function(){
-  $('.git').empty()
-  getsMyGit();
-});
+// $('button').on('click', function(){
+//   $('.git').empty()
+//   getsMyGit();
+// });

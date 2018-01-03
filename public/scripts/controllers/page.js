@@ -2,24 +2,24 @@
 
 page('/', homePage);
 page('/portfolio', portfolioPage);
-page('/experience', experiencePage);
+page('/design', designPage);
 page();
 
 function homePage(){
   $('[data-type="about"]').show();
   $('[data-type="portfolio"]').hide();
-  $('[data-type="experience"]').hide();
+  $('[data-type="design"]').hide();
 }
 
 function portfolioPage(){
   app.Project.onLoadPage();
   $('[data-type="about"]').hide();
   $('[data-type="portfolio"]').show();
-  $('[data-type="experience"]').hide();
+  $('[data-type="design"]').hide();
 }
 
-function experiencePage(){
+function designPage(){
   $('[data-type="about"]').hide();
   $('[data-type="portfolio"]').hide();
-  $('[data-type="experience"]').show();
+  $('[data-type="design"]').show();
 }
