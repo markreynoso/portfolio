@@ -19,16 +19,23 @@
         <h4 class="title">{{ title }}</h4>
         <a href="{{ website }}"><img src="{{ img }}" alt="image"></a>
         <p class="description">{{ description }} (see <a href="{{ link }}">GitHub</a>)</p>
+        <hr>
       </div>
     </script>
     <script id="design-template" type="text/x-handlebars-template">
       <div class="design">
         <h4 class="title">{{ title }}</h4>
         {{#each img}}
-        <div class="image"><img src="{{ this }}" alt="image"></div>
+        <div class="design-image"><img src="{{ this }}" alt="image"></div>
         {{/each}}
         <p class="year">{{ year }}</p>
         <p class="description">{{ description }}</p>
+        <p class="design-detail"><strong class="strong">contribution: </strong>{{ contribution }}</p>
+        <p class="design-detail"><strong class="strong">used: </strong>{{ used }}</p>
+        <p class="design-detail"><strong class="strong">type: </strong>{{ type }}</p>
+        <p class="design-detail"><strong class="strong">style: </strong>{{ style }}</p>
+        <p class="design-detail"><strong class="strong">audience: </strong>{{ audience }}</p>
+        <hr>
       </div>
     </script>
   </head>
@@ -77,7 +84,6 @@
           <!-- </div> -->
       <!-- </div> -->
     </div>
-    <hr>
     <footer>
       <div class="links">
         <a href="http://github.com/markreynoso"><img src="images/gh.svg" alt="github link"></a>

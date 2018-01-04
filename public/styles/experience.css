@@ -2,7 +2,7 @@
   display: none;
 }
 
-.job, #experience {
+/* .job, #experience {
   font-family: 'Raleway', sans-serif;
   width: 100%;
 }
@@ -11,8 +11,8 @@
   text-align: center;
   padding-top: 2vh;
   font-weight: 600;
-}
-.job p, .git p, #experience p {
+} */
+/* .job p, .git p, #experience p {
   font-size: 20px;
   text-align: center;
 }
@@ -20,7 +20,7 @@
   text-align: center;
   padding-top: 5vh;
   padding-bottom: 5vh;
-}
+} */
 button {
   color: white;
   border-radius: 5px;
@@ -29,8 +29,32 @@ button {
   width: 30vw;
   height: 7vh;
 }
-/*.github h4 {}
-.github p {
+.design {
+  text-align: center;
+}
+.design-image {
+  max-width: 35vw;
+  max-height: 35vh;
+  display: inline-block;
+}
+.design-image img {
+  max-width: 35vw;
+  max-height: 35vh;
+  padding: 1vw;
+}
+.design-detail {
+  margin: auto;
   font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-}*/
+  font-size: 1em;
+  padding-bottom: .2em;
+}
+.strong {
+  font-weight: 700;
+}
+
+@media (min-width: 655px) {
+  .design-detail {
+    width: 60%;
+    font-size: 1.25em;
+  }
+}

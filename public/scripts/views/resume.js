@@ -20,6 +20,10 @@ function Design (data) {
   this.title = data.title;
   this.img = data.img;
   this.description = data.description;
+  this.contribution = data.contribution;
+  this.used = data.contribution;
+  this.type = data.type;
+  this.style = data.style;
   this.audience = data.audience;
 }
 Design.prototype.toHtml = function(){
