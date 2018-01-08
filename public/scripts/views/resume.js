@@ -21,7 +21,7 @@ function Design (data) {
   this.img = data.img;
   this.description = data.description;
   this.contribution = data.contribution;
-  this.used = data.contribution;
+  this.used = data.used;
   this.type = data.type;
   this.style = data.style;
   this.audience = data.audience;
