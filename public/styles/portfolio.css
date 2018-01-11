@@ -1,6 +1,6 @@
 h3 {
   text-align: center;
-  margin-top: 7vh;
+  margin-top: 8vh;
   padding: 1em 0;
   font-family: 'Raleway', sans-serif;
   color: white;
@@ -14,15 +14,15 @@ h3 {
   width: 100%;
   text-align: center;
 }
-.project h4 {
+.title {
   font-family: 'Raleway', sans-serif;
   font-size: 1.5em;
-  padding: 1em 0 .5em;
+  padding: 1em 1em .5em;
 }
 .project img {
   width: 75%;
 }
-.project p {
+.description {
   margin: auto;
   width: 75%;
   padding: 1em 0;
@@ -36,14 +36,17 @@ h3 {
   display: none;
 }
 @media (min-width: 655px) {
-  .project h4 {
+  .title {
     font-size: 2em;
   }
   .project img {
     width: 60%;
   }
-  .project p {
+  .description {
     width: 60%;
     font-size: 1.25em;
+  }
+  h3{
+    margin-top: 7vh;
   }
 }
