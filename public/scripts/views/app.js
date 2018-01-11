@@ -8,6 +8,7 @@ var app = app || {};
   function Project (details) {
     this.title = details.title;
     this.link = details.link;
+    this.website = details.website;
     this.img = details.img;
     this.year = details.year;
     this.client = details.client;
@@ -36,7 +37,7 @@ var app = app || {};
       }
     }
     else {
-      $.get('/data/thedata.json', Project.fillTheStuff(arr));
+      $.get('/data/thedata.json', Project.fillTheStuff);
     }
   }
 
@@ -48,7 +49,7 @@ var app = app || {};
     Project.renderToPage();
   }
 
-  Project.renderToPage = function(arr){
+  Project.renderToPage = function(){
     $('#projects').empty();
     projects.forEach(function(projectList){
       $('#projects').append(projectList.toHtml());

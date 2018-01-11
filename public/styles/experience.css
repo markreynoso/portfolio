@@ -2,7 +2,7 @@
   display: none;
 }
 
-.job, #experience {
+/* .job, #experience {
   font-family: 'Raleway', sans-serif;
   width: 100%;
 }
@@ -11,8 +11,8 @@
   text-align: center;
   padding-top: 2vh;
   font-weight: 600;
-}
-.job p, .git p, #experience p {
+} */
+/* .job p, .git p, #experience p {
   font-size: 20px;
   text-align: center;
 }
@@ -20,7 +20,7 @@
   text-align: center;
   padding-top: 5vh;
   padding-bottom: 5vh;
-}
+} */
 button {
   color: white;
   border-radius: 5px;
@@ -29,8 +29,91 @@ button {
   width: 30vw;
   height: 7vh;
 }
-/*.github h4 {}
-.github p {
+.design {
+  text-align: center;
+}
+.design-image {
+  max-width: 45vw;
+  max-height: 80vh;
+  display: inline-block;
+  padding: 1vw;
+}
+.design-image img {
+  max-width: 45vw;
+  max-height: 80vh;
+  /* padding: 1vw; */
+}
+.design-detail {
+  margin: auto;
   font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-}*/
+  font-size: 1em;
+  padding-bottom: .2em;
+  width: 95%;
+}
+.strong {
+  font-weight: 700;
+}
+.enlarged{
+  padding-top: 15vw;
+}
+.design-box{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.enlarged{
+  max-height: 97vh;
+  max-width: 90vw;
+  padding-top: 25vw;
+}
+.xout{
+  position: fixed;
+  top: 10px;
+  right: 35px;
+  width: 15px;
+  z-index: 100;
+}
+.xout img{
+  width: 10vw;
+  z-index: 100;
+}
+
+@media (min-width: 655px) {
+  .design-detail {
+    width: 60%;
+    font-size: 1.25em;
+  }
+  .design-image {
+    max-width: 35vw;
+    max-height: 35vh;
+  }
+  .design-image img {
+    max-width: 30vw;
+    max-height: 35vh;
+  }
+  .design-image img:hover{
+    cursor: pointer;
+    opacity: .5;
+  }
+  .enlarged{
+    padding-top: 1vw;
+  }
+  .xout{
+    top: 20px;
+    right: 20px;
+    width: 5vw;
+  }
+  .xout:hover{
+    cursor: pointer;
+  }
+  .xout img{
+    width: 5vw;
+    z-index: 100;
+  }
+}
