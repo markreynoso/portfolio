@@ -20,3 +20,13 @@ $('.list').hover(function(){
 //   $('.git').empty()
 //   getsMyGit();
 // });
+
+// design page single view
+$('.enlarge').on('click', function(){
+  $('.design-box').show()
+  $('.enlarged').attr('src', this.src)
+})
+
+$('.xout').on('click', function(){
+  $('.design-box').hide()
+})

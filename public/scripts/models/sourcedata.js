@@ -74,6 +74,15 @@ var designData = [{
   type: 'mailed',
   style: 'Top fold 4 x 6 card',
   audience: 250
+}, {
+  title: 'Shelter Logo',
+  img: ['images/nest_orange.png', 'images/nest_berry.png'],
+  description: 'Logo to accompany homeless shelter launch for New Horizons.',
+  contribution: 'design',
+  used: 'Adobe Illustrator',
+  type: 'digital',
+  style: 'online, print',
+  audience: 6000 + '+'
 }];
 
 // var jobData = [{

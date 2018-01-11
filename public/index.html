@@ -26,7 +26,7 @@
       <div class="design">
         <h4 class="title">{{ title }}</h4>
         {{#each img}}
-        <div class="design-image"><img src="{{ this }}" alt="image"></div>
+        <div class="design-image"><img class="enlarge" src="{{ this }}" alt="image"></div>
         {{/each}}
         <p class="year">{{ year }}</p>
         <p class="description">{{ description }}</p>
@@ -93,6 +93,12 @@
         &copy; 2017 Mark Reynoso
       </div>
     </footer>
+    <div class="design-box">
+      <img class="enlarged" src="" alt="enlarged">
+      <div class="xout">
+        <img src="images/xout.png" alt="close">
+      </div>
+    </div>
   </body>
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script type="text/javascript" src="/scripts/models/sourcedata.js"></script>
