@@ -15,18 +15,14 @@ $('.list').hover(function(){
   $(this).css('background-color', 'transparent');
 });
 
-//git stuff
-// $('button').on('click', function(){
-//   $('.git').empty()
-//   getsMyGit();
-// });
-
 // design page single view
 $('.enlarge').on('click', function(){
   $('.design-box').show()
+  $('.next').show()
   $('.enlarged').attr('src', this.src)
 })
 
 $('.xout').on('click', function(){
   $('.design-box').hide()
+  $('.next').hide()
 })
