@@ -7,9 +7,6 @@ h3 {
   font-size: 30px;
   background-color: rgb(147, 147, 147);
 }
-/*#template {
-  display: none;
-}*/
 .project {
   width: 100%;
   text-align: center;
@@ -48,5 +45,18 @@ h3 {
   }
   h3{
     margin-top: 7vh;
+  }
+  .next{
+    width: 4vw;
+    height: 5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 40vh;
+    right: 0;
+    z-index: 102;
+    display: none;
+  }
+  .next:hover{
+    cursor: pointer;
   }
 }

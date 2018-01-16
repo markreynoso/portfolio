@@ -84,19 +84,3 @@ var designData = [{
   style: 'online, print',
   audience: 6000 + '+'
 }];
-
-// var jobData = [{
-//   title: 'Student',
-//   start: 'September 2017',
-//   end: 'current',
-//   summary: 'Learning code and all the things.',
-//   company: 'Code Fellows',
-//   used: 'HTML, CSS, javascript, jquery, JSON, ajax,'
-// }, {
-//   title: 'Development Officer',
-//   start: 'October 2014',
-//   end: 'September 2017',
-//   summary: 'Oversaw fundraising, public relations, communications, church relations, donor relationships, and events.',
-//   company: 'New Horizons',
-//   used: 'Adobe Design Suite, Constant Contact, etapestry,'
-// }];
