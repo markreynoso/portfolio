@@ -1,7 +1,7 @@
 [{
   "title":"Machine Learning",
   "link":"https://github.com/markreynoso/electric_slide",
-  "website":"https://electric_slide.herokuapp.com/",
+  "website":"http://electric-slide.herokuapp.com/",
   "img":"images/electric_slide.png",
   "year":"2017",
   "client":"Code Fellows",
