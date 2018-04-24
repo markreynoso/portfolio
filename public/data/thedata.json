@@ -8,7 +8,7 @@
   "type":"website",
   "description":"Electric Slide is a comparative implementation of artificial intelligence and machine learning algorithms to efficiently solve the classic sliding puzzle."},
 {
-  "title":"Star Wars Name Search",
+  "title":"Star Wars Character Search",
   "link":"https://github.com/markreynoso/starwars-character-filter",
   "website":"https://starwarscharacters.netlify.com/",
   "img":"images/starwars.png",
